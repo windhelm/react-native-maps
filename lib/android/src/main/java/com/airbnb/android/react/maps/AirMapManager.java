@@ -36,7 +36,7 @@ public class AirMapManager extends ViewGroupManager<AirMapView> {
   private static final int FIT_TO_SUPPLIED_MARKERS = 6;
   private static final int FIT_TO_COORDINATES = 7;
   private static final int SET_MAP_BOUNDARIES = 8;
-  private static final int ANIMATE_TO_NAVIGATION = 9; 
+  private static final int ANIMATE_TO_NAVIGATION = 9;
   private static final int SET_INDOOR_ACTIVE_LEVEL_INDEX = 10;
   private static final int SET_CAMERA = 11;
   private static final int ANIMATE_CAMERA = 12;
@@ -198,6 +198,12 @@ public class AirMapManager extends ViewGroupManager<AirMapView> {
   public void setScrollEnabled(AirMapView view, boolean scrollEnabled) {
     view.map.getUiSettings().setScrollGesturesEnabled(scrollEnabled);
   }
+
+  @ReactProp(name = "scrollGesturesEnabledDuringRotateOrZoom", defaultBoolean = false)
+    public void setScrollGesturesEnabledDuringRotateOrZoom(AirMapView view, boolean scrollGesturesEnabledDuringRotateOrZoom) {
+      view.map.getUiSettings().setScrollGesturesEnabledDuringRotateOrZoom(scrollGesturesEnabledDuringRotateOrZoom);
+  }
+
 
   @ReactProp(name = "zoomEnabled", defaultBoolean = false)
   public void setZoomEnabled(AirMapView view, boolean zoomEnabled) {
@@ -384,7 +390,7 @@ public class AirMapManager extends ViewGroupManager<AirMapView> {
 
     return map;
   }
-  
+
   @Nullable
   @Override
   public Map<String, Integer> getCommandsMap() {
