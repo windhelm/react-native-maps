@@ -522,10 +522,6 @@ id regionAsJSON(MKCoordinateRegion region) {
   self.indoorEnabled = showsIndoors;
 }
 
-- (void)setShowsIndoors:(BOOL)showsIndoors {
-  self.indoorEnabled = showsIndoors;
-}
-
 - (void)setAllowScrollGesturesDuringRotateOrZoom:(BOOL)allowScrollGesturesDuringRotateOrZoom {
     self.settings.allowScrollGesturesDuringRotateOrZoom = allowScrollGesturesDuringRotateOrZoom;
 }

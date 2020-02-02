@@ -204,7 +204,6 @@ public class AirMapManager extends ViewGroupManager<AirMapView> {
       view.map.getUiSettings().setScrollGesturesEnabledDuringRotateOrZoom(scrollGesturesEnabledDuringRotateOrZoom);
   }
 
-
   @ReactProp(name = "zoomEnabled", defaultBoolean = false)
   public void setZoomEnabled(AirMapView view, boolean zoomEnabled) {
     view.map.getUiSettings().setZoomGesturesEnabled(zoomEnabled);
